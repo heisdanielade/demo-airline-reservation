@@ -6,6 +6,7 @@ This project is a **school project** focused on designing and implementing a **d
 ### **🔧 Tools Used**
 - **MariaDB** (Database)
 - **Oracle DB Modeler** (For designing entity relationships)
+- **dbdiagram.io** (For Entity-Relationship visualization)
 
 ---
 
