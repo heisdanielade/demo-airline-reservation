@@ -6,6 +6,8 @@ This project is a school project focused on designing and implementing a **datab
 ### 🔧 Tools Used
 - **MariaDB** (Database)
 - **Oracle DB Modeler** (For designing entity relationships)
+- **Java**, **SQL**
+
 
 ---
 
