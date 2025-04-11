@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB4A5DDB-C733-103B-612C-758A8B58C484" name="activity_status">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-26 17:30:43 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>activity_status</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="status_id" id="C595D70C-4784-F4AD-069B-0C70B6999839">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-26 17:31:00 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="8FA58E04-AB7A-084F-2C16-B41402D01CB9">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-26 17:31:18 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F698B184-7143-1C2A-143E-88E99ACA6CC7" name="activity_status PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-26 17:31:16 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>C595D70C-4784-F4AD-069B-0C70B6999839</newElementsIDs>
+<usedAttributes>
+<attributeRef>C595D70C-4784-F4AD-069B-0C70B6999839</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

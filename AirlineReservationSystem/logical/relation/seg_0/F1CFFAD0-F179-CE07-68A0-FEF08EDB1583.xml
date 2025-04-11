@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="gender_to_employee" directorySegmentName="seg_0" id="F1CFFAD0-F179-CE07-68A0-FEF08EDB1583">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 20:37:49 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<sourcePk>5678AB95-E574-C7A0-041C-39A5EE3B62DB</sourcePk>
+<targetPk>4D2015FD-0355-BE24-A67C-8B487828CE0E</targetPk>
+<identifying>false</identifying>
+<nameOnSource>is to</nameOnSource>
+<nameOnTarget>is a</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>28D9F661-44BA-FDFC-F98D-FC69BC66677C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>98D1D03A-8255-6C5A-66EE-13043BCD944F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

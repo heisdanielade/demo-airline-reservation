@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="AirlineReservationSystem" id="BDAEAD1F-4C7E-3F29-85A4-985DDDC4C6EC" version="3.5">
+<createdBy>student</createdBy>
+<createdTime>2025-03-07 10:09:42 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>BDAEAD1F-4C7E-3F29-85A4-985DDDC4C6EC</designId>
+</OSDM_Design>

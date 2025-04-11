@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E9EF3A83-E6D8-EFDE-ED98-D4191B02E30E" name="boarding_pass">
+<createdBy>student</createdBy>
+<createdTime>2025-03-21 10:09:53 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>boarding_pass</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="pass_id" id="3EA84482-3D75-349C-37CE-0AC5E65EBE65">
+<createdBy>student</createdBy>
+<createdTime>2025-03-21 10:28:52 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="boarding_time" id="8E69C90D-49F1-3457-9D4C-79758C18C75B">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-23 00:25:32 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gate_number" id="DA5E88F6-2BA1-DC90-B61C-64A470232949">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-09 12:45:22 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ticket_id" id="F4734FC2-2912-BD6E-9A37-E79D7C00180A">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-07 10:49:21 UTC</createdTime>
+<generatorID>1897BDA6-EB8E-CD1C-B30F-EC6034082A3E</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>46341B36-E914-C424-BCDC-087F26F4E6F4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="seat_id" id="541DDA2F-6357-B08E-11E2-1823BD84698A">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-09 12:35:32 UTC</createdTime>
+<generatorID>C670F454-4E88-B092-6BD8-20E6FD2391F9</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>5A92A19B-9F5B-F387-AFC4-B1A28E345586</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0525F427-1643-4DBF-3BFB-7957661C9E07" name="boarding_pass PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 20:13:05 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>3EA84482-3D75-349C-37CE-0AC5E65EBE65</newElementsIDs>
+<usedAttributes>
+<attributeRef>3EA84482-3D75-349C-37CE-0AC5E65EBE65</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

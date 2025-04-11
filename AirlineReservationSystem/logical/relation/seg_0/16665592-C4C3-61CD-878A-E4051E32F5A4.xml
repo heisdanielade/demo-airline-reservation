@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="bag_type_to_passenger_bag" directorySegmentName="seg_0" id="16665592-C4C3-61CD-878A-E4051E32F5A4">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 19:23:20 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<sourcePk>1DA4CBD1-E961-D09B-A93F-3ECE6AEEC117</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>is for </nameOnSource>
+<nameOnTarget>is of type</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9C57A1AD-1B4B-9C2A-14DF-AAFD132546E2</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>65B65873-FF30-4985-F11D-AE4506B3143C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

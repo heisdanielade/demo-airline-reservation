@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="seat_to_boarding_pass" directorySegmentName="seg_0" id="C670F454-4E88-B092-6BD8-20E6FD2391F9">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-09 12:35:32 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<sourcePk>3C974BBB-FE32-FD0D-A34E-04BF11192463</sourcePk>
+<targetPk>0525F427-1643-4DBF-3BFB-7957661C9E07</targetPk>
+<identifying>false</identifying>
+<nameOnSource>for</nameOnSource>
+<nameOnTarget>has</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>EC2C2327-9B9C-6993-9B8C-BC599AAA34C0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E9EF3A83-E6D8-EFDE-ED98-D4191B02E30E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

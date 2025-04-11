@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D1019F3-D354-1F9B-3C48-2ACAB55B31F3" name="nationality">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 20:44:10 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>nationality</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nationality_id" id="33EFF880-1038-903A-289C-2209DDC0BCC0">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 20:44:25 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="71133CE4-19F2-5AA4-249E-BF3E52C39681">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 20:45:05 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="332EBFD8-B23F-233D-E313-5DD1FE6ADFED" name="nationality PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 20:47:44 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>33EFF880-1038-903A-289C-2209DDC0BCC0</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="FDE53FC5-378C-F40C-76AC-0FCB2206F777" name="name">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 20:47:48 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<newElementsIDs>71133CE4-19F2-5AA4-249E-BF3E52C39681</newElementsIDs>
+<usedAttributes>
+<attributeRef>71133CE4-19F2-5AA4-249E-BF3E52C39681</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

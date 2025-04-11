@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="client_to_ticket" directorySegmentName="seg_0" id="AFB9A1D2-55F2-CEA6-7CB2-146CB3C8E0FE">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 19:38:06 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<sourcePk>EC300F40-9088-68DC-89F3-5117471D3E91</sourcePk>
+<targetPk>3B048C80-E46C-3E8D-CAF6-D37A6A514134</targetPk>
+<identifying>false</identifying>
+<nameOnSource>made</nameOnSource>
+<nameOnTarget>made by</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>84BEC434-1D60-FF71-DC1C-F707FC77642F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>549A0BCC-9C87-6C28-C606-A8D0FF5F509E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

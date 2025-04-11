@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4B53AD06-5D58-DD37-20F4-E746B744DEBB" name="aircraft_type">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 19:32:02 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>acft_type</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="aircraft_type_id" id="A650E3CB-6B4C-32C0-C4D1-119C4DD50DA6">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 19:32:36 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="model" id="C1295201-65C4-76D8-189A-0C9543D806AC">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 19:32:52 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="aircraft_manufacturer_id" id="A82DC1D4-EA59-6B29-1D9E-259ADD785EE2">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 07:59:53 UTC</createdTime>
+<generatorID>09802AA4-9F71-5894-E3BC-3F6A1B8C9D68</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>8C7AC538-D333-D5E0-3F1F-C6A56E5DBBB9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="017FB20B-1774-3302-D94A-D97F3D6B6B52" name="aircraft_type PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 19:32:51 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A650E3CB-6B4C-32C0-C4D1-119C4DD50DA6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

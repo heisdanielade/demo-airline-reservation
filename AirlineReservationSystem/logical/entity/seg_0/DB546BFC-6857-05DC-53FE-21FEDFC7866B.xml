@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DB546BFC-6857-05DC-53FE-21FEDFC7866B" name="currency">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 19:58:20 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>cur</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="currency_id" id="4CA69DC8-ACCE-3CDE-1984-251FD8484F3F">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 19:58:32 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="D880942D-B148-3482-6F4A-31D308C31871">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 19:58:46 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="code" id="79D2CE0F-1505-C2BB-C7FD-09361B07E356">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 19:59:40 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6A9D01BA-5010-6D40-154D-332795DB97D7" name="currency PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 19:58:45 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4CA69DC8-ACCE-3CDE-1984-251FD8484F3F</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="37A6486D-665B-D88F-542E-E51B8D6CA0AD" name="currency_code">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-08 20:00:10 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<newElementsIDs>79D2CE0F-1505-C2BB-C7FD-09361B07E356</newElementsIDs>
+<usedAttributes>
+<attributeRef>79D2CE0F-1505-C2BB-C7FD-09361B07E356</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

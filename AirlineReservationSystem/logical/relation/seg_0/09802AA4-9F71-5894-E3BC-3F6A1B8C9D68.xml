@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="aircraft_type_to_manufacturer" directorySegmentName="seg_0" id="09802AA4-9F71-5894-E3BC-3F6A1B8C9D68">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-26 16:45:34 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<sourcePk>017FB20B-1774-3302-D94A-D97F3D6B6B52</sourcePk>
+<targetPk>770B6F29-B11C-AA07-EABC-F5E93EF6BCFC</targetPk>
+<identifying>false</identifying>
+<nameOnSource>made by</nameOnSource>
+<nameOnTarget>manufactured</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>4B53AD06-5D58-DD37-20F4-E746B744DEBB</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>091DE4B1-E47F-33FD-493D-7D428343C9E6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

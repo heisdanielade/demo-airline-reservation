@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="payment_method_to_payment" directorySegmentName="seg_0" id="99365A79-7BEB-A88E-8D3F-9B2F5A91B794">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-26 18:32:25 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<sourcePk>C1BB5C30-3EEF-F8F1-7185-1431D35962F1</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>used in</nameOnSource>
+<nameOnTarget>with</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8DB5B2CC-6198-7153-E8AD-271C87298471</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E0F9CABE-F946-C307-9F7B-B8198CADC115</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

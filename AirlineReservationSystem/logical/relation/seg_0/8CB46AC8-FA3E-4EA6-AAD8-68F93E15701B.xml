@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="aircraft_type_to_aircraft" directorySegmentName="seg_0" id="8CB46AC8-FA3E-4EA6-AAD8-68F93E15701B">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 17:39:04 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<sourcePk>017FB20B-1774-3302-D94A-D97F3D6B6B52</sourcePk>
+<targetPk>2705A4DD-73B4-A655-D850-DB9F3D0305ED</targetPk>
+<identifying>false</identifying>
+<nameOnSource>is for</nameOnSource>
+<nameOnTarget>has</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4B53AD06-5D58-DD37-20F4-E746B744DEBB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>47365694-CC98-65A2-9095-316C487B406B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

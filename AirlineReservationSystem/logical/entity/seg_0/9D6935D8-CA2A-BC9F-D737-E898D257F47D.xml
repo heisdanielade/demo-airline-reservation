@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9D6935D8-CA2A-BC9F-D737-E898D257F47D" name="flight_crew">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 19:46:04 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>flt_crew</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="flight_crew_id" id="4783FF12-075A-9679-5441-6C58D74FE612">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 19:46:19 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="note" id="E059B492-5BA1-FD89-EBDE-3F9A943DC212">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 18:49:54 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="flight_id" id="5077CC09-C971-B054-3CAF-5F8969CE337A">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 18:51:05 UTC</createdTime>
+<generatorID>05B958F0-6A02-4296-69AA-86BE9281E2D6</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>2DBC2AD5-32F8-ECD0-FAF4-2C6CCE8FE670</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_id" id="5FDBFFC9-EE57-F3F9-4229-FF9B3504E213">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 19:01:05 UTC</createdTime>
+<generatorID>7F2E6072-7407-FF1E-5B2B-F12A39B0AD3D</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>D71A9BE8-5DF2-864F-C874-7556B7C749B6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="role_id" id="4EB676F0-1F9A-AAFF-4152-55435AC24966">
+<createdBy>student</createdBy>
+<createdTime>2025-04-04 10:23:04 UTC</createdTime>
+<generatorID>F4415689-0B18-CD15-A0EE-80AECF98191B</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>DA3FDB2A-FA55-D483-7355-2AF3CD7E5915</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="15DE46F7-EC31-EE13-EF2D-61C217284614" name="flight_crew PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-03-22 19:46:36 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4783FF12-075A-9679-5441-6C58D74FE612</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

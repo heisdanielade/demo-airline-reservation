@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EC2C2327-9B9C-6993-9B8C-BC599AAA34C0" name="seat">
+<createdBy>student</createdBy>
+<createdTime>2025-03-21 11:15:28 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>seat</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="seat_id" id="5A92A19B-9F5B-F387-AFC4-B1A28E345586">
+<createdBy>student</createdBy>
+<createdTime>2025-03-21 11:15:42 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="seat_row" id="5B02691C-BB2C-5383-B7EC-996EDB87F3A8">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 17:44:51 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="seat_number" id="3D30B5B6-6914-80C8-C980-240DB6C4447B">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 17:46:44 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type_id" id="255C4728-17EB-F5BF-8D52-F546E746885A">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 17:49:35 UTC</createdTime>
+<generatorID>15F8C7A9-D22E-3884-246F-480D3CCE95F9</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>617F60C2-E339-EE39-D0BE-DB69B3CB3660</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="aircraft_cabin_id" id="36123D97-117C-2BAD-1CAE-9E0C22119346">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-03 17:57:01 UTC</createdTime>
+<generatorID>5B19F5E5-A960-84C8-82BF-EB7F27537D44</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>F8F1DBBE-945F-0CBF-1DCB-998B4D5BC561</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ticket_id" id="B7BF6D36-0BB2-1F4E-7EB5-05C6E0E15175">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-09 12:33:07 UTC</createdTime>
+<generatorID>528FC975-B525-9F87-106E-B4A9DB846D2B</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>46341B36-E914-C424-BCDC-087F26F4E6F4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3C974BBB-FE32-FD0D-A34E-04BF11192463" name="seat PK">
+<createdBy>student</createdBy>
+<createdTime>2025-03-21 11:16:35 UTC</createdTime>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5A92A19B-9F5B-F387-AFC4-B1A28E345586</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
