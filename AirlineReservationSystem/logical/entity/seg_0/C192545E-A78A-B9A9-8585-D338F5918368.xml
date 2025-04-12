@@ -41,21 +41,6 @@
 <dataTypeSize>255</dataTypeSize>
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="dept_no" id="9E03BFAE-FAD9-5324-1205-8BF5C343F4F9">
-<createdBy>heisd</createdBy>
-<createdTime>2025-04-08 20:36:08 UTC</createdTime>
-<generatorID>7970D914-D1E1-284E-C443-E6E1E4688D20</generatorID>
-<ownerDesignName>AirlineReservationSystem</ownerDesignName>
-<engineerTo>
-<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
-</engineerTo>
-<referedAttribute>452DDA0B-5322-9909-FEC7-BE8A79A8F11E</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>6</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="1927988B-BFF1-73B4-4B54-4BB4F27C0EE9" name="job_position PK">

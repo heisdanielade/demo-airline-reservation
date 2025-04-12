@@ -35,7 +35,6 @@
 <engineerTo>
 <item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -80,6 +79,21 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dept_no" id="57221C5F-9122-CD97-773D-53B491A33EA2">
+<createdBy>heisd</createdBy>
+<createdTime>2025-04-12 08:32:22 UTC</createdTime>
+<generatorID>B5269730-3E42-F03D-13ED-6D1D753A607C</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<engineerTo>
+<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
+</engineerTo>
+<referedAttribute>452DDA0B-5322-9909-FEC7-BE8A79A8F11E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

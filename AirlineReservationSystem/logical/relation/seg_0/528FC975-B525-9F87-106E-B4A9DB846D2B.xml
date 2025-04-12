@@ -11,11 +11,11 @@
 <identifying>false</identifying>
 <nameOnSource>for</nameOnSource>
 <nameOnTarget>with</nameOnTarget>
-<optionalSource>true</optionalSource>
+<optionalSource>false</optionalSource>
 <optionalTarget>true</optionalTarget>
-<sourceCardinality>1</sourceCardinality>
+<sourceCardinality>*</sourceCardinality>
 <sourceEntity>549A0BCC-9C87-6C28-C606-A8D0FF5F509E</sourceEntity>
-<targetCardinalityString>*</targetCardinalityString>
+<targetCardinalityString>1</targetCardinalityString>
 <targetEntity>EC2C2327-9B9C-6993-9B8C-BC599AAA34C0</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>

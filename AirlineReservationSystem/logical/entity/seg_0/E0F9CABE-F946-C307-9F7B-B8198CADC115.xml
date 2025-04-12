@@ -42,19 +42,6 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="currency" id="8B18607D-FB6D-033F-A216-10D724BC3346">
-<createdBy>heisd</createdBy>
-<createdTime>2025-03-22 23:56:49 UTC</createdTime>
-<ownerDesignName>AirlineReservationSystem</ownerDesignName>
-<engineerTo>
-<item key="D0C10FD3-F4B6-55C3-F143-FC12EED9718E" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="payment_date" id="EE4E0B66-33AE-12FF-9500-F73983A4443C">
 <createdBy>heisd</createdBy>
 <createdTime>2025-03-22 20:10:45 UTC</createdTime>
