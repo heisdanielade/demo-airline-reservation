@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F27D52D2-714D-F2E7-5996-514F86C111EC" name="country">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>78F36A46-AAA9-3E04-BEAE-E1CC1A9E5057</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<abbreviation>ctry</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="country_id" id="98FBD0C2-B346-8320-5299-93A24AAB1AFD">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>9E00CBF9-0295-0536-1201-B1FB178FB959</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="A24F8639-565F-EDF4-70A0-60379BF8A1D1">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>112C3184-AE51-66DE-09A9-9BD2A2F16705</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="code" id="65148B49-D3FC-BA08-B007-32F0E9D87513">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>D1C70881-E204-C815-0250-68AF0B77237A</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="55D171FF-C44E-232D-1431-60BADCCC2F9E" name="country_PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>F1D92926-A0EE-E339-A279-310DE1C7B996</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98FBD0C2-B346-8320-5299-93A24AAB1AFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E05F1F4-D4D1-E024-CBB1-D6B82A817A17" name="country_code_UN">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>CB68F559-0452-94D0-9E73-E87D6DD82115</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65148B49-D3FC-BA08-B007-32F0E9D87513"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12AFD5B8-5A19-8576-5959-8B5CB60E8550" name="country_name_UN">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>D4233F9D-A2B9-FDDE-5973-00817C13A632</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A24F8639-565F-EDF4-70A0-60379BF8A1D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="369AEB46-58BE-F870-7D31-681448280D81" containerWithKeyObject="17C3AD5F-72B7-E7E7-F65A-CCC495F2A7C4" localFKIndex="5553947A-FA4E-6B8B-7B08-1FC6904B3417" name="flight_crew_crew_role_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>F4415689-0B18-CD15-A0EE-80AECF98191B</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<referredTableLongName>crew_role</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>827EF3A4-E286-EF2E-B2E5-187F243C8876</referredTableID>
+<keyObject>9D1312BB-E334-AD6A-4DB1-9C37FFAEFD97</keyObject>
+<referredKeyID>9D1312BB-E334-AD6A-4DB1-9C37FFAEFD97</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>role_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

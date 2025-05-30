@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="48C2B2D5-E83F-FCA4-CA1E-49A846D52110" containerWithKeyObject="E7663FF9-5A15-2D3F-BEE0-0F77CC75A391" localFKIndex="2D4C02D9-DCAD-E2A4-0CE9-798101D38829" name="payment_payment_method_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>99365A79-7BEB-A88E-8D3F-9B2F5A91B794</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<referredTableLongName>payment_method</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8B124905-F77C-8342-6915-DC7E1B51A5D0</referredTableID>
+<keyObject>87E84B7D-4C6A-55C1-471F-70C284FF3C59</keyObject>
+<referredKeyID>87E84B7D-4C6A-55C1-471F-70C284FF3C59</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>method_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

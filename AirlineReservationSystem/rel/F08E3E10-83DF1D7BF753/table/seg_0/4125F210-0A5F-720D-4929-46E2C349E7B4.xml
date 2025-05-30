@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4125F210-0A5F-720D-4929-46E2C349E7B4" name="flight">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>7DF47B84-BCE5-60AB-A6EA-0C1DE36F5699</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<abbreviation>flt</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="flight_id" id="C40379D7-6059-81E5-7CBB-5164DAA47820">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>2DBC2AD5-32F8-ECD0-FAF4-2C6CCE8FE670</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="base_departure_time" id="94999A7E-90AC-695F-1821-A54129DB410A">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>5B9C9037-2F2B-61E7-E0B7-E866442ECB2D</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="base_arrival_time" id="30EC29D9-BE77-18C6-F6E1-4767BA9A5647">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>8D1062E0-A922-F0C4-8A95-3E3E3DFB3ED6</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="departure_airport_id" id="683A6BCF-540C-418F-E3C8-8BBB2A8AC579">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>81C425C8-B6B5-39CB-D002-91FE3FC8E161</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0AC602F9-C31B-8A17-1C81-9C15174F6FB9" referredColumn="B48071D6-AC93-6A9E-E3E5-7CD5E6CDB93C"/>
+</associations>
+</Column>
+<Column name="arrival_airport_id" id="793E0AE7-7970-CF8F-FAAB-F00C889E0965">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>7F5F3256-646F-8CBA-15E0-3B80EFB63EA1</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2E02D616-F479-C810-A27C-96F6DA514F80" referredColumn="B48071D6-AC93-6A9E-E3E5-7CD5E6CDB93C"/>
+</associations>
+</Column>
+<Column name="aircraft_id" id="7CF7E6E1-0B08-5ECD-B508-9322D4AE7360">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>0D5B64E0-E882-5B91-D816-221F12032A97</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7FA9FD79-1CF6-D3A5-6A5B-5A4ADDBBB321" referredColumn="5FBD3EE6-2709-BCA9-7708-F2AE7AEACCC6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ADCA9E77-2508-A4C4-760B-AE5238A3E679" name="flight_PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>5E5169B5-9EA9-0981-0B5C-4D3C81977C4D</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C40379D7-6059-81E5-7CBB-5164DAA47820"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FF4958F-21FE-DFB3-A163-68F4DF9FA6B8" name="flight_aircraft_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>6F7C94CB-78F5-2390-8B0E-8690BD51C7D5</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7CF7E6E1-0B08-5ECD-B508-9322D4AE7360"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FC482C4E-DBEE-ECFF-FC1A-7EAB183B761C" name="flight_airport_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>2F560870-F199-0E11-0B7D-D33D4E05F951</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="793E0AE7-7970-CF8F-FAAB-F00C889E0965"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="667A2D04-904C-78CB-3B8E-042AEC3BDF6A" name="flight_airport_FKv2">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>3BF12C09-897B-5909-76E5-34FE65978EAA</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="683A6BCF-540C-418F-E3C8-8BBB2A8AC579"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

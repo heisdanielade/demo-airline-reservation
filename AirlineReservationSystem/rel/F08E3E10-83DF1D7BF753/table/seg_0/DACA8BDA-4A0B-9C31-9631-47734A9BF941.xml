@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DACA8BDA-4A0B-9C31-9631-47734A9BF941" name="job_position">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>C192545E-A78A-B9A9-8585-D338F5918368</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<abbreviation>job_pos</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="job_position_id" id="2C7B2819-1BA9-1DFF-AB8D-E38026216D9F">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>79A4495E-42F3-1555-A3E3-C0958AAD510B</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="title" id="F8F61AC9-A7DC-1F14-DC0F-F33CAA4D4937">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>20D7D9CD-1425-0BF1-9658-CD53482CF033</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1D680D5F-DD64-6456-7B4E-14A3843C1911" name="job_position_PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>1927988B-BFF1-73B4-4B54-4BB4F27C0EE9</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C7B2819-1BA9-1DFF-AB8D-E38026216D9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

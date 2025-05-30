@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A3CD910A-443B-81AA-00DB-84C4F7C24F46" containerWithKeyObject="1A8CD852-E2B0-EFD4-3205-D6BA1A0CF3E2" localFKIndex="FF30B918-3E6F-5747-0865-1BCD6E584518" name="employee_assignment_job_position_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>6BBF91FE-CD82-D485-4B4C-AA1FF16BD661</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<referredTableLongName>job_position</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DACA8BDA-4A0B-9C31-9631-47734A9BF941</referredTableID>
+<keyObject>1D680D5F-DD64-6456-7B4E-14A3843C1911</keyObject>
+<referredKeyID>1D680D5F-DD64-6456-7B4E-14A3843C1911</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>job_position_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

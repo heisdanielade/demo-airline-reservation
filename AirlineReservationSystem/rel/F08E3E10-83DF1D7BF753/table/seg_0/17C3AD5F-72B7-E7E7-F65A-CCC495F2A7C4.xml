@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="17C3AD5F-72B7-E7E7-F65A-CCC495F2A7C4" name="flight_crew">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>9D6935D8-CA2A-BC9F-D737-E898D257F47D</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<abbreviation>flt_crew</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="flight_crew_id" id="6A4B363C-2F0F-5F29-047B-BC66A7F4445E">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>4783FF12-075A-9679-5441-6C58D74FE612</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="note" id="494C17C6-B4CB-0CA1-B4BE-35DE8A2B9BD7">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>E059B492-5BA1-FD89-EBDE-3F9A943DC212</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="flight_id" id="7E1E516B-9049-8AD3-6121-C504D1DF8175">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>5077CC09-C971-B054-3CAF-5F8969CE337A</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="26512DEA-E6F2-1EF1-9965-45B4F1FF1E7E" referredColumn="C40379D7-6059-81E5-7CBB-5164DAA47820"/>
+</associations>
+</Column>
+<Column name="employee_id" id="8D513629-9082-5E32-02C0-40FE8CCDBDAA">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>5FDBFFC9-EE57-F3F9-4229-FF9B3504E213</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8CBE1C2C-138C-3EEA-2503-4492DBBC9C97" referredColumn="6CCBE7D5-D080-8500-355F-A147D9670FC0"/>
+</associations>
+</Column>
+<Column name="role_id" id="EA7892F8-A1C5-5A2A-17F8-8CDD6AA30782">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>4EB676F0-1F9A-AAFF-4152-55435AC24966</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="369AEB46-58BE-F870-7D31-681448280D81" referredColumn="B0A473C2-CC0B-E9DF-E430-AED07064568C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DB1237F3-38B7-BEAE-428C-F2111BC34308" name="flight_crew_PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>15DE46F7-EC31-EE13-EF2D-61C217284614</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A4B363C-2F0F-5F29-047B-BC66A7F4445E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A86510DB-E2E6-50B1-925D-5811BB56BEB4" name="flight_crew_employee_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>7F2E6072-7407-FF1E-5B2B-F12A39B0AD3D</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D513629-9082-5E32-02C0-40FE8CCDBDAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5553947A-FA4E-6B8B-7B08-1FC6904B3417" name="flight_crew_crew_role_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>F4415689-0B18-CD15-A0EE-80AECF98191B</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA7892F8-A1C5-5A2A-17F8-8CDD6AA30782"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8898CEA-C45B-30C6-E0F4-82A3F024F09A" name="flight_crew_flight_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>05B958F0-6A02-4296-69AA-86BE9281E2D6</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7E1E516B-9049-8AD3-6121-C504D1DF8175"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

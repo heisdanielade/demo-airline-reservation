@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F0C22945-C94C-CA49-514B-631BE01F7CEA" name="aircraft_cabin_class">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>A44EBF01-3463-3468-1025-E4128B27A34D</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<abbreviation>acft_cabin_class</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="aircraft_cabin_id" id="8885EA15-A000-5573-8087-B6E1DBBF2AF3">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>F8F1DBBE-945F-0CBF-1DCB-998B4D5BC561</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="aircraft_id" id="572A23F1-E8B9-8EA6-FBDA-DFDD3B82EFDB">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>BD388916-649C-B6AD-C40F-998F240F039F</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14650823-8415-3C2E-0ED1-470BB7501C19" referredColumn="5FBD3EE6-2709-BCA9-7708-F2AE7AEACCC6"/>
+</associations>
+</Column>
+<Column name="cabin_class_id" id="058C0EEF-DABB-5060-1FB4-56703658F73C">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>A273F12B-D39F-72A6-2BE2-51D95DBEC5F4</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78AA6690-1E5D-5B82-A5D6-272B54B4273E" referredColumn="77B56BD7-C11E-1777-5032-5FCD7454ACB7"/>
+</associations>
+</Column>
+<Column name="seat_capacity" id="846A65ED-2452-1673-126F-1E28FDB2A4FB">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>90202556-4C45-AA85-4B82-15E75FF71DC1</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2C9A2ADC-2488-B842-4C3F-213E4CD6BF97" name="aircraft_cabin_class_PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>CA210408-9D92-447A-9A03-69F74165E897</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8885EA15-A000-5573-8087-B6E1DBBF2AF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46EDF9B9-CF83-61DA-2E6E-5196EBBB2C5A" name="aircraft_cabin_class_aircraft_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>F6CDCD35-2948-8232-65B1-67207C3199FD</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="572A23F1-E8B9-8EA6-FBDA-DFDD3B82EFDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC627DB0-7526-FC55-0BD2-BC4ABC7BD056" name="aircraft_cabin_class_cabin_class_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>52B5E08A-C3D8-DD24-654A-99DE4A8192D7</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="058C0EEF-DABB-5060-1FB4-56703658F73C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

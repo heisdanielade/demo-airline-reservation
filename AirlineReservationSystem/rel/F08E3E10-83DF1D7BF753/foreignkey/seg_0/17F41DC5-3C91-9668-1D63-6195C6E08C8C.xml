@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="17F41DC5-3C91-9668-1D63-6195C6E08C8C" containerWithKeyObject="8848F2CD-80E7-0741-FC0F-257AE1340A88" localFKIndex="BDA7942E-1D2A-79DE-2C8F-4A6F7DE90207" name="ticket_currency_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>490374D0-9992-C9F1-FC49-9C059DE35699</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<referredTableLongName>currency</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3C6B3BB3-0ED3-1CAF-E69F-23EAEFC8A2ED</referredTableID>
+<keyObject>99012512-4CAB-9E1F-CA8F-D42C2242DFD0</keyObject>
+<referredKeyID>99012512-4CAB-9E1F-CA8F-D42C2242DFD0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>currency_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

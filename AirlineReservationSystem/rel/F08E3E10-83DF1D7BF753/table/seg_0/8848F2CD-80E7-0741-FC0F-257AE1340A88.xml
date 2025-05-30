@@ -1,0 +1,253 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8848F2CD-80E7-0741-FC0F-257AE1340A88" name="ticket">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>549A0BCC-9C87-6C28-C606-A8D0FF5F509E</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<abbreviation>tckt</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ticket_id" id="15201AA9-F024-4EA6-96E4-5C7CF00C718A">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>46341B36-E914-C424-BCDC-087F26F4E6F4</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="booking_time" id="B647E61B-5C0E-0B0D-9D62-C03DA897F851">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>7314D484-0F5F-6660-1C11-CA840552E7AC</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="127C97C0-5A07-D5BC-D4F8-57C9EF3269D9">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>B8E82FEA-C17E-7BB3-D7FB-C987CAC7AFAF</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pax_first_name" id="B1DFE482-1FAD-23AA-ABEA-FB81D1C47B2D">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>EFA8665A-ED92-470A-9423-D0399A8E0205</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pax_last_name" id="EB01E867-686D-B171-42D1-37E2F2197D3F">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>7AECEF93-05CA-B251-9B11-778F81DC5786</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pax_date_of_birth" id="BE286A89-7BC9-4494-E002-26518A02F3FE">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>C04E9600-8B39-3A15-AEB1-ACF31DF5FADE</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pax_phone_number" id="61C5BF94-0C3B-EEC5-6A14-DA1464AD021F">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>1370B1FA-09B9-DA5E-7016-D00394069217</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pax_email_address" id="6DE3463D-CA9C-35DC-027E-5A7A575482FF">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>6E3E120F-7D50-BD77-86B0-B9066B4CCD7E</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="flight_id" id="FBAE8634-4BA9-2694-6439-761887D3B9F7">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>1A6FA323-2F57-BCAD-90D3-66B4057A3882</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="433FFE84-160E-065F-351E-CC3F8E40B677" referredColumn="C40379D7-6059-81E5-7CBB-5164DAA47820"/>
+</associations>
+</Column>
+<Column name="client_id" id="037ACE83-6A7E-075C-70E3-C3D449C46DAF">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>1B17B124-C8F9-45F6-76E7-7F2203B96F7B</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08D8F223-A8CA-FE34-C9A4-77FA61656A41" referredColumn="E614FBF0-2E56-E68E-96C1-FE5E22606C8B"/>
+</associations>
+</Column>
+<Column name="document_type_id" id="8DE4D5B8-5CDD-E3E9-1E38-3CCE0CB62AF8">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>AAC5E7CA-0384-71F5-F236-3F60DC0683A1</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF91BCBD-AA68-2F2F-ED17-0A7CA4FE58E7" referredColumn="7CADBED1-33CD-5DBC-3F93-0941AA8BE8CE"/>
+</associations>
+</Column>
+<Column name="currency_id" id="C8D5039A-455D-64F5-BC44-3B50EBF0DCDB">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>BD82D228-560D-3714-D32A-0685E5895641</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="17F41DC5-3C91-9668-1D63-6195C6E08C8C" referredColumn="DEB28A37-5724-7AD9-7AC4-5179B42151B6"/>
+</associations>
+</Column>
+<Column name="seat_id" id="24F99240-9CA6-754C-D13E-8BB0314218DC">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>BCC6ED43-0282-0FFF-E36E-78AC34591FB5</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13ED9765-36E8-2A6B-1340-AAAFAC2D2AD2" referredColumn="BC890928-9B15-4BD7-E26D-2C03DF359ED3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F587DB32-441E-85E5-535B-367000FB17A5" name="ticket_PK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>3B048C80-E46C-3E8D-CAF6-D37A6A514134</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15201AA9-F024-4EA6-96E4-5C7CF00C718A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="87004A99-7D06-2EC4-F0F7-9B7F657D83DB" name="ticket_client_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>AFB9A1D2-55F2-CEA6-7CB2-146CB3C8E0FE</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="037ACE83-6A7E-075C-70E3-C3D449C46DAF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BDA7942E-1D2A-79DE-2C8F-4A6F7DE90207" name="ticket_currency_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>490374D0-9992-C9F1-FC49-9C059DE35699</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8D5039A-455D-64F5-BC44-3B50EBF0DCDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4796830-35F8-6283-26D1-7ECA709492C1" name="ticket_document_type_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>7EB6E3EA-7FB0-5015-9736-435D7402A917</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DE4D5B8-5CDD-E3E9-1E38-3CCE0CB62AF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="981C4D75-58A9-C114-5C9A-FAA8984BF30D" name="ticket_flight_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>F22C650B-E5E5-A9BB-782B-63FB4B25250A</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBAE8634-4BA9-2694-6439-761887D3B9F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C8AF70F6-9A9E-4294-C131-9363314EABE3" name="ticket_seat_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>528FC975-B525-9F87-106E-B4A9DB846D2B</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24F99240-9CA6-754C-D13E-8BB0314218DC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

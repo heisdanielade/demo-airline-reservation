@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="14650823-8415-3C2E-0ED1-470BB7501C19" containerWithKeyObject="F0C22945-C94C-CA49-514B-631BE01F7CEA" localFKIndex="46EDF9B9-CF83-61DA-2E6E-5196EBBB2C5A" name="aircraft_cabin_class_aircraft_FK">
+<createdBy>heisd</createdBy>
+<createdTime>2025-05-30 12:58:30 UTC</createdTime>
+<generatorID>F6CDCD35-2948-8232-65B1-67207C3199FD</generatorID>
+<ownerDesignName>AirlineReservationSystem</ownerDesignName>
+<referredTableLongName>aircraft</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>08F8653A-D5A7-3F4A-07C4-3D27D2285DFA</referredTableID>
+<keyObject>C1584672-AC52-3F5E-4C5D-CE0D52CBE7FE</keyObject>
+<referredKeyID>C1584672-AC52-3F5E-4C5D-CE0D52CBE7FE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>aircraft_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
