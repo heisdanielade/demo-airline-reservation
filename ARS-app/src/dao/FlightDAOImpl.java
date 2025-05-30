@@ -80,6 +80,7 @@ public class FlightDAOImpl implements FlightDAO{
             return stmt.executeUpdate() > 0;
         } catch (SQLException e){
             System.err.println("(e) Error deleting flight: " + e.getMessage());
+            return false;
         }
     }
 }
