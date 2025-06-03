@@ -9,17 +9,17 @@
 
 -- predefined type, no DDL - XMLTYPE
 
-CREATE OR REPLACE TABLE activity_status ( 
-   status_id INTEGER NOT NULL , 
+CREATE TABLE activity_status ( 
+   status_id INTEGER NOT NULL, 
    name VARCHAR(255) NOT NULL 
 );
 
 ALTER TABLE activity_status 
    ADD CONSTRAINT activity_status_PK PRIMARY KEY ( status_id );
 
-CREATE OR REPLACE TABLE aircraft 
+CREATE TABLE aircraft 
     ( 
-     aircraft_id         INTEGER  NOT NULL , 
+     aircraft_id         INTEGER  NOT NULL, 
      registration_number VARCHAR(255)  NOT NULL , 
      status_id           INTEGER  NOT NULL , 
      max_seat_capacity   INTEGER  NOT NULL , 
@@ -30,9 +30,9 @@ CREATE OR REPLACE TABLE aircraft
 ALTER TABLE aircraft 
     ADD CONSTRAINT aircraft_PK PRIMARY KEY ( aircraft_id ) ;
 
-CREATE OR REPLACE TABLE aircraft_cabin_class 
+CREATE TABLE aircraft_cabin_class 
     ( 
-     aircraft_cabin_id INTEGER  NOT NULL , 
+     aircraft_cabin_id INTEGER  NOT NULL, 
      aircraft_id       INTEGER  NOT NULL , 
      cabin_class_id    INTEGER  NOT NULL , 
      seat_capacity     INTEGER 
@@ -42,9 +42,9 @@ CREATE OR REPLACE TABLE aircraft_cabin_class
 ALTER TABLE aircraft_cabin_class 
     ADD CONSTRAINT aircraft_cabin_class_PK PRIMARY KEY ( aircraft_cabin_id ) ;
 
-CREATE OR REPLACE TABLE aircraft_manufacturer 
+CREATE TABLE aircraft_manufacturer 
     ( 
-     aircraft_manufacturer_id INTEGER  NOT NULL , 
+     aircraft_manufacturer_id INTEGER  NOT NULL, 
      name                     VARCHAR(255)  NOT NULL 
     ) 
 ;
@@ -52,9 +52,9 @@ CREATE OR REPLACE TABLE aircraft_manufacturer
 ALTER TABLE aircraft_manufacturer 
     ADD CONSTRAINT aircraft_manufacturer_PK PRIMARY KEY ( aircraft_manufacturer_id ) ;
 
-CREATE OR REPLACE TABLE aircraft_type 
+CREATE TABLE aircraft_type 
     ( 
-     aircraft_type_id         INTEGER  NOT NULL , 
+     aircraft_type_id         INTEGER  NOT NULL, 
      model                    VARCHAR(255)  NOT NULL , 
      aircraft_manufacturer_id INTEGER  NOT NULL 
     ) 
@@ -63,9 +63,9 @@ CREATE OR REPLACE TABLE aircraft_type
 ALTER TABLE aircraft_type 
     ADD CONSTRAINT aircraft_type_PK PRIMARY KEY ( aircraft_type_id ) ;
 
-CREATE OR REPLACE TABLE airport 
+CREATE TABLE airport 
     ( 
-     airport_id   INTEGER  NOT NULL , 
+     airport_id   INTEGER  NOT NULL, 
      name         VARCHAR(255)  NOT NULL , 
      airport_code VARCHAR(10)  NOT NULL , 
      city_id      INTEGER  NOT NULL 
@@ -75,9 +75,9 @@ CREATE OR REPLACE TABLE airport
 ALTER TABLE airport 
     ADD CONSTRAINT airport_PK PRIMARY KEY ( airport_id ) ;
 
-CREATE OR REPLACE TABLE baggage 
+CREATE TABLE baggage 
     ( 
-     baggage_id      INTEGER  NOT NULL , 
+     baggage_id      INTEGER  NOT NULL, 
      weight          DECIMAL(5,2)  NOT NULL , 
      extra_fee       DECIMAL(8,2) , 
      baggage_type_id INTEGER  NOT NULL , 
@@ -88,9 +88,9 @@ CREATE OR REPLACE TABLE baggage
 ALTER TABLE baggage 
     ADD CONSTRAINT baggage_PK PRIMARY KEY ( baggage_id ) ;
 
-CREATE OR REPLACE TABLE baggage_type 
+CREATE TABLE baggage_type 
     ( 
-     baggage_type_id INTEGER  NOT NULL , 
+     baggage_type_id INTEGER  NOT NULL, 
      name            VARCHAR(255)  NOT NULL 
     ) 
 ;
@@ -98,7 +98,7 @@ CREATE OR REPLACE TABLE baggage_type
 ALTER TABLE baggage_type 
     ADD CONSTRAINT baggage_type_PK PRIMARY KEY ( baggage_type_id ) ;
 
-CREATE OR REPLACE TABLE boarding_pass 
+CREATE TABLE boarding_pass 
     ( 
      pass_id       VARCHAR(50)  NOT NULL , 
      boarding_time DATE  NOT NULL , 
@@ -116,9 +116,9 @@ CREATE UNIQUE INDEX boarding_pass__IDX ON boarding_pass
 ALTER TABLE boarding_pass 
     ADD CONSTRAINT boarding_pass_PK PRIMARY KEY ( pass_id ) ;
 
-CREATE OR REPLACE TABLE cabin_class 
+CREATE TABLE cabin_class 
     ( 
-     cabin_class_id INTEGER  NOT NULL , 
+     cabin_class_id INTEGER  NOT NULL, 
      name VARCHAR(255) NOT NULL , 
      seat_pitch     DECIMAL(7,2) , 
      seat_width     DECIMAL(7,2) , 
@@ -129,9 +129,9 @@ CREATE OR REPLACE TABLE cabin_class
 ALTER TABLE cabin_class 
     ADD CONSTRAINT cabin_class_PK PRIMARY KEY ( cabin_class_id ) ;
 
-CREATE OR REPLACE TABLE city 
+CREATE TABLE city 
     ( 
-     city_id    INTEGER  NOT NULL , 
+     city_id    INTEGER  NOT NULL, 
      name       VARCHAR(50)  NOT NULL , 
      country_id INTEGER  NOT NULL 
     ) 
@@ -140,9 +140,9 @@ CREATE OR REPLACE TABLE city
 ALTER TABLE city 
     ADD CONSTRAINT city_PK PRIMARY KEY ( city_id ) ;
 
-CREATE OR REPLACE TABLE client 
+CREATE TABLE client 
     ( 
-     client_id     INTEGER  NOT NULL , 
+     client_id     INTEGER  NOT NULL, 
      first_name    VARCHAR(255)  NOT NULL , 
      last_name     VARCHAR(255)  NOT NULL , 
      email_address VARCHAR(255)  NOT NULL 
@@ -152,9 +152,9 @@ CREATE OR REPLACE TABLE client
 ALTER TABLE client 
     ADD CONSTRAINT client_PK PRIMARY KEY ( client_id ) ;
 
-CREATE OR REPLACE TABLE country 
+CREATE TABLE country 
     ( 
-     country_id INTEGER  NOT NULL , 
+     country_id INTEGER  NOT NULL, 
      name       VARCHAR(255)  NOT NULL , 
      code       VARCHAR(10)  NOT NULL 
     ) 
@@ -169,9 +169,9 @@ ALTER TABLE country
 ALTER TABLE country 
     ADD CONSTRAINT country_name_UN UNIQUE ( name ) ;
 
-CREATE OR REPLACE TABLE crew_role 
+CREATE TABLE crew_role 
     ( 
-     role_id   INTEGER  NOT NULL , 
+     role_id   INTEGER  NOT NULL, 
      role_name VARCHAR(255)  NOT NULL 
     ) 
 ;
@@ -179,9 +179,9 @@ CREATE OR REPLACE TABLE crew_role
 ALTER TABLE crew_role 
     ADD CONSTRAINT crew_role_PK PRIMARY KEY ( role_id ) ;
 
-CREATE OR REPLACE TABLE currency 
+CREATE TABLE currency 
     ( 
-     currency_id INTEGER  NOT NULL , 
+     currency_id INTEGER  NOT NULL, 
      name        VARCHAR(60)  NOT NULL , 
      code        VARCHAR(6)  NOT NULL 
     ) 
@@ -193,7 +193,7 @@ ALTER TABLE currency
 ALTER TABLE currency 
     ADD CONSTRAINT currency_code_UN UNIQUE ( code ) ;
 
-CREATE OR REPLACE TABLE department 
+CREATE TABLE department 
     ( 
      dept_no VARCHAR(6)  NOT NULL , 
      name    VARCHAR(255)  NOT NULL 
@@ -203,7 +203,7 @@ CREATE OR REPLACE TABLE department
 ALTER TABLE department 
     ADD CONSTRAINT department_PK PRIMARY KEY ( dept_no ) ;
 
-CREATE OR REPLACE TABLE document_type 
+CREATE TABLE document_type 
     ( 
      document_type_id INTEGER  NOT NULL , 
      name             VARCHAR(255)  NOT NULL 
@@ -213,7 +213,7 @@ CREATE OR REPLACE TABLE document_type
 ALTER TABLE document_type 
     ADD CONSTRAINT document_type_PK PRIMARY KEY ( document_type_id ) ;
 
-CREATE OR REPLACE TABLE employee 
+CREATE TABLE employee 
     ( 
      employee_id    INTEGER  NOT NULL , 
      first_name     VARCHAR(255)  NOT NULL , 
@@ -232,7 +232,7 @@ CREATE OR REPLACE TABLE employee
 ALTER TABLE employee 
     ADD CONSTRAINT employee_PK PRIMARY KEY ( employee_id ) ;
 
-CREATE OR REPLACE TABLE employee_assignment 
+CREATE TABLE employee_assignment 
     ( 
      assignment_id   INTEGER  NOT NULL , 
      start_date      DATE  NOT NULL , 
@@ -246,9 +246,9 @@ CREATE OR REPLACE TABLE employee_assignment
 ALTER TABLE employee_assignment 
     ADD CONSTRAINT employee_assignment_PK PRIMARY KEY ( assignment_id ) ;
 
-CREATE OR REPLACE TABLE flight 
+CREATE TABLE flight 
     ( 
-     flight_id            INTEGER  NOT NULL , 
+     flight_id            INTEGER  NOT NULL, 
      base_departure_time  DATE  NOT NULL , 
      base_arrival_time    DATE  NOT NULL , 
      departure_airport_id INTEGER  NOT NULL , 
@@ -260,9 +260,9 @@ CREATE OR REPLACE TABLE flight
 ALTER TABLE flight 
     ADD CONSTRAINT flight_PK PRIMARY KEY ( flight_id ) ;
 
-CREATE OR REPLACE TABLE flight_crew 
+CREATE TABLE flight_crew 
     ( 
-     flight_crew_id INTEGER  NOT NULL , 
+     flight_crew_id INTEGER  NOT NULL, 
      note           VARCHAR(255) , 
      flight_id      INTEGER  NOT NULL , 
      employee_id    INTEGER  NOT NULL , 
@@ -273,9 +273,9 @@ CREATE OR REPLACE TABLE flight_crew
 ALTER TABLE flight_crew 
     ADD CONSTRAINT flight_crew_PK PRIMARY KEY ( flight_crew_id ) ;
 
-CREATE OR REPLACE TABLE flight_schedule 
+CREATE TABLE flight_schedule 
     ( 
-     flight_schedule_id   INTEGER  NOT NULL , 
+     flight_schedule_id   INTEGER  NOT NULL, 
      departure_time       DATE  NOT NULL , 
      arrival_time         DATE , 
      schedule_update_time DATE , 
@@ -287,7 +287,7 @@ CREATE OR REPLACE TABLE flight_schedule
 ALTER TABLE flight_schedule 
     ADD CONSTRAINT flight_schedule_PK PRIMARY KEY ( flight_schedule_id ) ;
 
-CREATE OR REPLACE TABLE gender 
+CREATE TABLE gender 
     ( 
      gender_id INTEGER  NOT NULL , 
      name      VARCHAR(255)  NOT NULL 
@@ -297,9 +297,9 @@ CREATE OR REPLACE TABLE gender
 ALTER TABLE gender 
     ADD CONSTRAINT gender_PK PRIMARY KEY ( gender_id ) ;
 
-CREATE OR REPLACE TABLE job_position 
+CREATE TABLE job_position 
     ( 
-     job_position_id INTEGER  NOT NULL , 
+     job_position_id INTEGER  NOT NULL, 
      title           VARCHAR(255)  NOT NULL 
     ) 
 ;
@@ -307,9 +307,9 @@ CREATE OR REPLACE TABLE job_position
 ALTER TABLE job_position 
     ADD CONSTRAINT job_position_PK PRIMARY KEY ( job_position_id ) ;
 
-CREATE OR REPLACE TABLE nationality 
+CREATE TABLE nationality 
     ( 
-     nationality_id INTEGER  NOT NULL , 
+     nationality_id INTEGER  NOT NULL, 
      name           VARCHAR(50)  NOT NULL 
     ) 
 ;
@@ -320,9 +320,9 @@ ALTER TABLE nationality
 ALTER TABLE nationality 
     ADD CONSTRAINT nationality_name_UN UNIQUE ( name ) ;
 
-CREATE OR REPLACE TABLE payment 
+CREATE TABLE payment 
     ( 
-     payment_id   INTEGER  NOT NULL , 
+     payment_id   INTEGER  NOT NULL, 
      amount_paid  DECIMAL(10,2)  NOT NULL , 
      payment_date DATE  NOT NULL , 
      method_id    INTEGER  NOT NULL , 
@@ -335,9 +335,9 @@ CREATE OR REPLACE TABLE payment
 ALTER TABLE payment 
     ADD CONSTRAINT payment_PK PRIMARY KEY ( payment_id ) ;
 
-CREATE OR REPLACE TABLE payment_method 
+CREATE TABLE payment_method 
     ( 
-     method_id INTEGER  NOT NULL , 
+     method_id INTEGER  NOT NULL, 
      name      VARCHAR(255)  NOT NULL 
     ) 
 ;
@@ -345,9 +345,9 @@ CREATE OR REPLACE TABLE payment_method
 ALTER TABLE payment_method 
     ADD CONSTRAINT payment_method_PK PRIMARY KEY ( method_id ) ;
 
-CREATE OR REPLACE TABLE payment_status 
+CREATE TABLE payment_status 
     ( 
-     status_id INTEGER  NOT NULL , 
+     status_id INTEGER  NOT NULL, 
      name      VARCHAR(20)  NOT NULL 
     ) 
 ;
@@ -355,9 +355,9 @@ CREATE OR REPLACE TABLE payment_status
 ALTER TABLE payment_status 
     ADD CONSTRAINT payment_status_PK PRIMARY KEY ( status_id ) ;
 
-CREATE OR REPLACE TABLE seat 
+CREATE TABLE seat 
     ( 
-     seat_id           INTEGER  NOT NULL , 
+     seat_id           INTEGER  NOT NULL, 
      seat_row          INTEGER  NOT NULL , 
      seat_number       VARCHAR(5)  NOT NULL , 
      type_id           INTEGER  NOT NULL , 
@@ -368,9 +368,9 @@ CREATE OR REPLACE TABLE seat
 ALTER TABLE seat 
     ADD CONSTRAINT seat_PK PRIMARY KEY ( seat_id ) ;
 
-CREATE OR REPLACE TABLE seat_type 
+CREATE TABLE seat_type 
     ( 
-     type_id INTEGER  NOT NULL , 
+     type_id INTEGER  NOT NULL, 
      name    VARCHAR(255) NOT NULL 
     ) 
 ;
@@ -378,9 +378,9 @@ CREATE OR REPLACE TABLE seat_type
 ALTER TABLE seat_type 
     ADD CONSTRAINT seat_type_PK PRIMARY KEY ( type_id ) ;
 
-CREATE OR REPLACE TABLE ticket 
+CREATE TABLE ticket 
     ( 
-     ticket_id         VARCHAR(50)  NOT NULL , 
+     ticket_id         VARCHAR(50) NOT NULL, 
      booking_time      DATE  NOT NULL , 
      price             DECIMAL(10,2)  NOT NULL , 
      pax_first_name    VARCHAR(255)  NOT NULL , 
@@ -783,7 +783,7 @@ ALTER TABLE ticket
 
 -- Oracle SQL Developer Data Modeler Summary Report: 
 -- 
--- CREATE OR REPLACE TABLE                            31
+-- CREATE TABLE                            31
 -- CREATE INDEX                             1
 -- ALTER TABLE                             69
 -- CREATE VIEW                              0
@@ -809,7 +809,7 @@ ALTER TABLE ticket
 -- CREATE MATERIALIZED VIEW                 0
 -- CREATE MATERIALIZED VIEW LOG             0
 -- CREATE SYNONYM                           0
--- CREATE OR REPLACE TABLESPACE                        0
+-- CREATE TABLESPACE                        0
 -- CREATE USER                              0
 -- 
 -- DROP TABLESPACE                          0
