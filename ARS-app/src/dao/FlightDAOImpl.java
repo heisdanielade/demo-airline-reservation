@@ -34,13 +34,18 @@ public class FlightDAOImpl implements FlightDAO{
 
     @Override
     public boolean addFlight(Flight flight) {
-        String query = "INSERT INTO flight (base_departure_time, base_arrival_time) VALUES (?, ?)";
-
+        String query = "INSERT INTO flight (base_departure_time, base_arrival_time, departure_airport_id, arrival_airport_id, aircraft_id) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
 
+            flight.setAircraftId(1);
+            flight.setDepartureAirportId(1);
+            flight.setArrivalAirportId(2);
             stmt.setTimestamp(1, Timestamp.valueOf(flight.getBaseDepartureTime()));
             stmt.setTimestamp(2, Timestamp.valueOf(flight.getBaseArrivalTime()));
+            stmt.setInt(3, flight.getDepartureAirportId());
+            stmt.setInt(4, flight.getArrivalAirportId());
+            stmt.setInt(5, flight.getAircraftId());
 
             return stmt.executeUpdate() > 0;
 
