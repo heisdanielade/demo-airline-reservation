@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 public class Flight {
     private int flightId;
     private int aircraftId;
+    private int departureAirportId;
+    private int arrivalAirportId;
     private LocalDateTime baseDepartureTime;
     private LocalDateTime baseArrivalTime;
     private String departureAirportName;
@@ -12,6 +14,22 @@ public class Flight {
 
     public int getAircraftId() {
         return aircraftId;
+    }
+
+    public int getDepartureAirportId() {
+        return departureAirportId;
+    }
+
+    public void setDepartureAirportId(int departureAirportId) {
+        this.departureAirportId = departureAirportId;
+    }
+
+    public int getArrivalAirportId() {
+        return arrivalAirportId;
+    }
+
+    public void setArrivalAirportId(int arrivalAirportId) {
+        this.arrivalAirportId = arrivalAirportId;
     }
 
     public void setAircraftId(int aircraftId) {
@@ -44,9 +62,11 @@ public class Flight {
         this.aircraftName = aircraftName;
     }
 
-    public Flight(int flightId, int aircraftId,  LocalDateTime baseDepartureTime, LocalDateTime baseArrivalTime, String departureAirportName, String arrivalAirportName, String aircraftName) {
+    public Flight(int flightId, int aircraftId, int departureAirportId, int arrivalAirportId, LocalDateTime baseDepartureTime, LocalDateTime baseArrivalTime, String departureAirportName, String arrivalAirportName, String aircraftName) {
         this.flightId = flightId;
         this.aircraftId = aircraftId;
+        this.departureAirportId = departureAirportId;
+        this.arrivalAirportId = arrivalAirportId;
         this.baseDepartureTime = baseDepartureTime;
         this.baseArrivalTime = baseArrivalTime;
         this.departureAirportName = departureAirportName;

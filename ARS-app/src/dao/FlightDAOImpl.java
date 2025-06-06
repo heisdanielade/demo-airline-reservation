@@ -49,17 +49,87 @@ public class FlightDAOImpl implements FlightDAO{
     }
 
     @Override
+    public List<String> getAllAirportNames() {
+        List<String> names = new ArrayList<>();
+        String sql = "SELECT name FROM airport";
+        try (Connection conn = DatabaseManager.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                names.add(rs.getString("name"));
+            }
+        } catch (SQLException e) {
+            System.err.println("Error loading airports: " + e.getMessage());
+        }
+        return names;
+    }
+
+    @Override
+    public List<String> getAllAircraftNames() {
+        List<String> names = new ArrayList<>();
+        String sql = "SELECT CONCAT(am.name, ' ', at.model) AS aircraft_name " +
+                     "FROM aircraft a " +
+                     "JOIN aircraft_type at ON a.aircraft_type_id = at.aircraft_type_id " +
+                     "JOIN aircraft_manufacturer am ON at.aircraft_manufacturer_id = am.aircraft_manufacturer_id";
+        try (Connection conn = DatabaseManager.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                names.add(rs.getString("aircraft_name"));
+            }
+        } catch (SQLException e) {
+            System.err.println("Error loading aircrafts: " + e.getMessage());
+        }
+        return names;
+    }
+
+    @Override
+    public int getAirportIdByName(String name) {
+        String sql = "SELECT airport_id FROM airport WHERE name = ?";
+        try (Connection conn = DatabaseManager.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, name);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) return rs.getInt("airport_id");
+        } catch (SQLException e) {
+            System.err.println("Error getting airport ID: " + e.getMessage());
+        }
+        return -1;
+    }
+
+    @Override
+    public int getAircraftIdByName(String name) {
+        String sql = "SELECT a.aircraft_id " +
+                     "FROM aircraft a " +
+                     "JOIN aircraft_type at ON a.aircraft_type_id = at.aircraft_type_id " +
+                     "JOIN aircraft_manufacturer am ON at.aircraft_manufacturer_id = am.aircraft_manufacturer_id " +
+                     "WHERE CONCAT(am.name, ' ', at.model) = ?";
+        try (Connection conn = DatabaseManager.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, name);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) return rs.getInt("aircraft_id");
+        } catch (SQLException e) {
+            System.err.println("Error getting aircraft ID: " + e.getMessage());
+        }
+        return -1;
+    }
+
+
+    @Override
     public boolean addFlight(Flight flight) {
         String query = "INSERT INTO flight (base_departure_time, base_arrival_time, departure_airport_id, arrival_airport_id, aircraft_id) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
 
-            flight.setAircraftId(1);
             stmt.setTimestamp(1, Timestamp.valueOf(flight.getBaseDepartureTime()));
             stmt.setTimestamp(2, Timestamp.valueOf(flight.getBaseArrivalTime()));
-            stmt.setInt(3, 1);
-            stmt.setInt(4, 2);
+            stmt.setInt(3, flight.getDepartureAirportId());
+            stmt.setInt(4, flight.getArrivalAirportId());
             stmt.setInt(5, flight.getAircraftId());
+
+            System.out.printf("(info) Inserting flight: depAirportId=%d, arrAirportId=%d, aircraftId=%d%n",
+                    flight.getDepartureAirportId(), flight.getArrivalAirportId(), flight.getAircraftId());
 
             return stmt.executeUpdate() > 0;
 
@@ -71,14 +141,18 @@ public class FlightDAOImpl implements FlightDAO{
 
     @Override
     public boolean updateFlight(Flight flight) {
-        String query = "UPDATE flight SET base_departure_time = ?, base_arrival_time = ? WHERE flight_id = ?";
+        String query = "UPDATE flight SET base_departure_time = ?, base_arrival_time = ?, departure_airport_id = ?, arrival_airport_id = ?, aircraft_id = ? WHERE flight_id = ?";
 
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
 
             stmt.setTimestamp(1, Timestamp.valueOf(flight.getBaseDepartureTime()));
             stmt.setTimestamp(2, Timestamp.valueOf(flight.getBaseArrivalTime()));
-            stmt.setInt(3, flight.getFlightId());
+            stmt.setInt(3, flight.getDepartureAirportId());
+            stmt.setInt(4, flight.getArrivalAirportId());
+            stmt.setInt(5, flight.getAircraftId());
+            stmt.setInt(6, flight.getFlightId());
+
 
             return stmt.executeUpdate() > 0;
 

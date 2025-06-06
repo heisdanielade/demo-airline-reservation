@@ -57,6 +57,9 @@ public class FlightView {
         ComboBox<String> depAirportBox = new ComboBox<>();
         ComboBox<String> arrAirportBox = new ComboBox<>();
         ComboBox<String> aircraftBox = new ComboBox<>();
+        depAirportBox.getItems().setAll(flightDAO.getAllAirportNames());
+        arrAirportBox.getItems().setAll(flightDAO.getAllAirportNames());
+        aircraftBox.getItems().setAll(flightDAO.getAllAircraftNames());
 
         HBox formBox = new HBox(10,
                 new VBox(new Label("Departure Time:"), depField),
@@ -97,11 +100,19 @@ public class FlightView {
                 LocalDateTime dep = LocalDateTime.parse(depField.getText(), formatter);
                 LocalDateTime arr = LocalDateTime.parse(arrField.getText(), formatter);
                 Flight flight = new Flight(dep, arr);
+                flight.setDepartureAirportId(flightDAO.getAirportIdByName(depAirportBox.getValue()));
+                flight.setArrivalAirportId(flightDAO.getAirportIdByName(arrAirportBox.getValue()));
+                flight.setAircraftId(flightDAO.getAircraftIdByName(aircraftBox.getValue()));
+
                 if (flightDAO.addFlight(flight)) {
                     loadFlights.run();
                     depField.clear();
                     arrField.clear();
+                    depAirportBox.getSelectionModel().clearSelection();
+                    arrAirportBox.getSelectionModel().clearSelection();
+                    aircraftBox.getSelectionModel().clearSelection();
                 }
+
             } catch (Exception ex) {
                 showError("Invalid input. Format must be: yyyy-MM-dd HH:mm");
             }
@@ -118,10 +129,17 @@ public class FlightView {
                 LocalDateTime arr = LocalDateTime.parse(arrField.getText(), formatter);
                 selected.setBaseDepartureTime(dep);
                 selected.setBaseArrivalTime(arr);
+                selected.setDepartureAirportId(flightDAO.getAirportIdByName(depAirportBox.getValue()));
+                selected.setArrivalAirportId(flightDAO.getAirportIdByName(arrAirportBox.getValue()));
+                selected.setAircraftId(flightDAO.getAircraftIdByName(aircraftBox.getValue()));
+
                 if (flightDAO.updateFlight(selected)) {
                     loadFlights.run();
                     depField.clear();
                     arrField.clear();
+                    depAirportBox.getSelectionModel().clearSelection();
+                    arrAirportBox.getSelectionModel().clearSelection();
+                    aircraftBox.getSelectionModel().clearSelection();
                 }
             } catch (Exception ex) {
                 showError("Invalid input. Format must be: yyyy-MM-dd HH:mm");
@@ -146,6 +164,9 @@ public class FlightView {
             if (newVal != null) {
                 depField.setText(newVal.getBaseDepartureTime().format(formatter));
                 arrField.setText(newVal.getBaseArrivalTime().format(formatter));
+                depAirportBox.setValue(newVal.getDepartureAirportName());
+                arrAirportBox.setValue(newVal.getArrivalAirportName());
+                aircraftBox.setValue(newVal.getAircraftName());
             }
         });
 
