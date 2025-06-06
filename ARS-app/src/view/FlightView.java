@@ -2,6 +2,7 @@ package view;
 
 import dao.FlightDAO;
 import dao.FlightDAOImpl;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -26,6 +27,13 @@ public class FlightView {
         TableColumn<Flight, Integer> idCol = new TableColumn<>("ID");
         idCol.setCellValueFactory(cell -> new javafx.beans.property.SimpleObjectProperty<>(cell.getValue().getFlightId()));
 
+        TableColumn<Flight, String> depAirportCol = new TableColumn<>("From Airport");
+        depAirportCol.setCellValueFactory(cell -> new SimpleObjectProperty<>(
+                cell.getValue().getDepartureAirportName()));
+
+        TableColumn<Flight, String> arrAirportCol = new TableColumn<>("To Airport");
+        arrAirportCol.setCellValueFactory(cell -> new SimpleObjectProperty<>(
+                cell.getValue().getArrivalAirportName()));
 
         TableColumn<Flight, String> depCol = new TableColumn<>("Departure Time");
         depCol.setCellValueFactory(cell -> new javafx.beans.property.SimpleObjectProperty<>(
@@ -35,7 +43,7 @@ public class FlightView {
         arrCol.setCellValueFactory(cell -> new javafx.beans.property.SimpleObjectProperty<>(
                 cell.getValue().getBaseArrivalTime().format(formatter)));
 
-        table.getColumns().addAll(idCol, depCol, arrCol);
+        table.getColumns().addAll(idCol, depAirportCol, arrAirportCol, depCol, arrCol);
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         // Form fields

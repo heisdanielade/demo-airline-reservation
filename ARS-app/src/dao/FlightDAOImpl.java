@@ -12,7 +12,15 @@ public class FlightDAOImpl implements FlightDAO{
     @Override
     public List<Flight> getAllFlights(){
         List<Flight> flights = new ArrayList<>();
-        String query = "SELECT * FROM flight";
+        String query = "SELECT \n" +
+                       "  f.flight_id, \n" +
+                       "  f.base_departure_time, \n" +
+                       "  f.base_arrival_time, \n" +
+                       "  da.name AS departure_airport_name, \n" +
+                       "  aa.name AS arrival_airport_name\n" +
+                       "FROM flight f\n" +
+                       "JOIN airport da ON f.departure_airport_id = da.airport_id\n" +
+                       "JOIN airport aa ON f.arrival_airport_id = aa.airport_id;\n";
 
         try(Connection conn = DatabaseManager.getConnection();
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -22,7 +30,9 @@ public class FlightDAOImpl implements FlightDAO{
                 flights.add(new Flight(
                         rs.getInt("flight_id"),
                         rs.getTimestamp("base_departure_time").toLocalDateTime(),
-                        rs.getTimestamp("base_arrival_time").toLocalDateTime()
+                        rs.getTimestamp("base_arrival_time").toLocalDateTime(),
+                        rs.getString("departure_airport_name"),
+                        rs.getString("arrival_airport_name")
                 ));
             }
         } catch (SQLException e){
@@ -39,12 +49,10 @@ public class FlightDAOImpl implements FlightDAO{
              PreparedStatement stmt = conn.prepareStatement(query)) {
 
             flight.setAircraftId(1);
-            flight.setDepartureAirportId(1);
-            flight.setArrivalAirportId(2);
             stmt.setTimestamp(1, Timestamp.valueOf(flight.getBaseDepartureTime()));
             stmt.setTimestamp(2, Timestamp.valueOf(flight.getBaseArrivalTime()));
-            stmt.setInt(3, flight.getDepartureAirportId());
-            stmt.setInt(4, flight.getArrivalAirportId());
+            stmt.setInt(3, 1);
+            stmt.setInt(4, 2);
             stmt.setInt(5, flight.getAircraftId());
 
             return stmt.executeUpdate() > 0;

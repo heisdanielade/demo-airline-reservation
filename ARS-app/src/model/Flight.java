@@ -6,24 +6,24 @@ public class Flight {
     private int flightId;
     private LocalDateTime baseDepartureTime;
     private LocalDateTime baseArrivalTime;
-    private int departureAirportId;
-    private int arrivalAirportId;
+    private String departureAirportName;
+    private String arrivalAirportName;
     private int aircraftId;
 
-    public int getDepartureAirportId() {
-        return departureAirportId;
+    public String getDepartureAirportName() {
+        return departureAirportName;
     }
 
-    public void setDepartureAirportId(int departureAirportId) {
-        this.departureAirportId = departureAirportId;
+    public void setDepartureAirportName(String departureAirportName) {
+        this.departureAirportName = departureAirportName;
     }
 
-    public int getArrivalAirportId() {
-        return arrivalAirportId;
+    public String getArrivalAirportName() {
+        return arrivalAirportName;
     }
 
-    public void setArrivalAirportId(int arrivalAirportId) {
-        this.arrivalAirportId = arrivalAirportId;
+    public void setArrivalAirportName(String arrivalAirportName) {
+        this.arrivalAirportName = arrivalAirportName;
     }
 
     public int getAircraftId() {
@@ -34,13 +34,21 @@ public class Flight {
         this.aircraftId = aircraftId;
     }
 
-    public Flight(int flightId, LocalDateTime baseDepartureTime, LocalDateTime baseArrivalTime, int departureAirportId, int arrivalAirportId, int aircraftId) {
+    public Flight(int flightId, LocalDateTime baseDepartureTime, LocalDateTime baseArrivalTime, String departureAirportId, String arrivalAirportId, int aircraftId) {
         this.flightId = flightId;
         this.baseDepartureTime = baseDepartureTime;
         this.baseArrivalTime = baseArrivalTime;
-        this.departureAirportId = departureAirportId;
-        this.arrivalAirportId = arrivalAirportId;
+        this.departureAirportName = departureAirportId;
+        this.arrivalAirportName = arrivalAirportId;
         this.aircraftId = aircraftId;
+    }
+
+    public Flight(int flightId, LocalDateTime baseDepartureTime, LocalDateTime baseArrivalTime, String departureAirportId, String arrivalAirportId) {
+        this.flightId = flightId;
+        this.baseDepartureTime = baseDepartureTime;
+        this.baseArrivalTime = baseArrivalTime;
+        this.departureAirportName = departureAirportId;
+        this.arrivalAirportName = arrivalAirportId;
     }
 
     public int getFlightId() {
