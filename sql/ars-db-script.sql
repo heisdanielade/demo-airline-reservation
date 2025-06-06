@@ -101,7 +101,7 @@ ALTER TABLE baggage_type
 CREATE TABLE boarding_pass 
     ( 
      pass_id       VARCHAR(50)  NOT NULL , 
-     boarding_time DATE  NOT NULL , 
+     boarding_time DATETIME  NOT NULL , 
      gate_number   VARCHAR(20)  NOT NULL , 
      ticket_id     VARCHAR(50)  NOT NULL , 
      seat_id       INTEGER  NOT NULL 
@@ -220,10 +220,10 @@ CREATE TABLE employee
      last_name      VARCHAR(255)  NOT NULL , 
      other_names    VARCHAR(255) , 
      monthly_salary DECIMAL(16,2)  NOT NULL , 
-     date_of_birth  DATE  NOT NULL , 
+     date_of_birth  DATETIME  NOT NULL , 
      email_address  VARCHAR(255)  NOT NULL , 
      phone_number   VARCHAR(255)  NOT NULL , 
-     hire_date      DATE  NOT NULL , 
+     hire_date      DATETIME  NOT NULL , 
      gender_id      INTEGER  NOT NULL , 
      nationality_id INTEGER  NOT NULL 
     ) 
@@ -235,7 +235,7 @@ ALTER TABLE employee
 CREATE TABLE employee_assignment 
     ( 
      assignment_id   INTEGER  NOT NULL , 
-     start_date      DATE  NOT NULL , 
+     start_date      DATETIME  NOT NULL , 
      end_date        DATE , 
      employee_id     INTEGER  NOT NULL , 
      job_position_id INTEGER  NOT NULL , 
@@ -249,8 +249,8 @@ ALTER TABLE employee_assignment
 CREATE TABLE flight 
     ( 
      flight_id            INTEGER  NOT NULL, 
-     base_departure_time  DATE  NOT NULL , 
-     base_arrival_time    DATE  NOT NULL , 
+     base_departure_time  DATETIME  NOT NULL , 
+     base_arrival_time    DATETIME  NOT NULL , 
      departure_airport_id INTEGER  NOT NULL , 
      arrival_airport_id   INTEGER  NOT NULL , 
      aircraft_id          INTEGER  NOT NULL 
@@ -276,7 +276,7 @@ ALTER TABLE flight_crew
 CREATE TABLE flight_schedule 
     ( 
      flight_schedule_id   INTEGER  NOT NULL, 
-     departure_time       DATE  NOT NULL , 
+     departure_time       DATETIME  NOT NULL , 
      arrival_time         DATE , 
      schedule_update_time DATE , 
      delay_reason         VARCHAR(255) , 
@@ -324,7 +324,7 @@ CREATE TABLE payment
     ( 
      payment_id   INTEGER  NOT NULL, 
      amount_paid  DECIMAL(10,2)  NOT NULL , 
-     payment_date DATE  NOT NULL , 
+     payment_date DATETIME  NOT NULL , 
      method_id    INTEGER  NOT NULL , 
      status_id    INTEGER  NOT NULL , 
      currency_id  INTEGER  NOT NULL , 
@@ -381,11 +381,11 @@ ALTER TABLE seat_type
 CREATE TABLE ticket 
     ( 
      ticket_id         VARCHAR(50) NOT NULL, 
-     booking_time      DATE  NOT NULL , 
+     booking_time      DATETIME  NOT NULL , 
      price             DECIMAL(10,2)  NOT NULL , 
      pax_first_name    VARCHAR(255)  NOT NULL , 
      pax_last_name     VARCHAR(255)  NOT NULL , 
-     pax_date_of_birth DATE  NOT NULL , 
+     pax_date_of_birth DATETIME  NOT NULL , 
      pax_phone_number  VARCHAR(255)  NOT NULL , 
      pax_email_address VARCHAR(255) , 
      flight_id         INTEGER  NOT NULL , 
@@ -779,6 +779,87 @@ ALTER TABLE ticket
     ) 
 ;
 
+
+ALTER TABLE activity_status 
+MODIFY status_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE flight 
+MODIFY flight_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE aircraft 
+MODIFY aircraft_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE airport 
+MODIFY airport_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE aircraft_type 
+MODIFY aircraft_type_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE aircraft_manufacturer 
+MODIFY aircraft_manufacturer_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE city 
+MODIFY city_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE country 
+MODIFY country_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE client 
+MODIFY client_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE employee 
+MODIFY employee_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE crew_role 
+MODIFY role_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE seat 
+MODIFY seat_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE cabin_class 
+MODIFY cabin_class_id INTEGER NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE aircraft_cabin_class 
+MODIFY aircraft_cabin_id INTEGER NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE seat_type 
+MODIFY type_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE baggage_type 
+MODIFY baggage_type_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE payment 
+MODIFY payment_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE payment_method 
+MODIFY method_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE payment_status 
+MODIFY status_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE currency 
+MODIFY currency_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE document_type 
+MODIFY document_type_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE employee_assignment 
+MODIFY assignment_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE gender 
+MODIFY gender_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE nationality 
+MODIFY nationality_id INTEGER NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE flight_crew 
+MODIFY flight_crew_id INTEGER NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE flight_schedule 
+MODIFY flight_schedule_id INTEGER NOT NULL AUTO_INCREMENT;
 
 
 -- Oracle SQL Developer Data Modeler Summary Report: 
