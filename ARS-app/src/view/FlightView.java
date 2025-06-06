@@ -43,16 +43,29 @@ public class FlightView {
         arrCol.setCellValueFactory(cell -> new javafx.beans.property.SimpleObjectProperty<>(
                 cell.getValue().getBaseArrivalTime().format(formatter)));
 
-        table.getColumns().addAll(idCol, depAirportCol, arrAirportCol, depCol, arrCol);
+        TableColumn<Flight, String> aircraftCol = new TableColumn<>("Aircraft");
+        aircraftCol.setCellValueFactory(cell -> new SimpleObjectProperty<>(cell.getValue().getAircraftName()));
+
+
+        table.getColumns().addAll(idCol, depAirportCol, arrAirportCol, aircraftCol, depCol, arrCol);
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         // Form fields
         depField.setPromptText("yyyy-MM-dd HH:mm");
         arrField.setPromptText("yyyy-MM-dd HH:mm");
 
-        HBox formBox = new HBox(10, new VBox(new Label("Departure:"), depField),
-                new VBox(new Label("Arrival:"), arrField));
-        formBox.setPadding(new Insets(10));
+        ComboBox<String> depAirportBox = new ComboBox<>();
+        ComboBox<String> arrAirportBox = new ComboBox<>();
+        ComboBox<String> aircraftBox = new ComboBox<>();
+
+        HBox formBox = new HBox(10,
+                new VBox(new Label("Departure Time:"), depField),
+                new VBox(new Label("Arrival Time:"), arrField),
+                new VBox(new Label("From Airport:"), depAirportBox),
+                new VBox(new Label("To Airport:"), arrAirportBox),
+                new VBox(new Label("Aircraft:"), aircraftBox)
+        );
+
 
         Button addBtn = new Button("Add");
         Button updateBtn = new Button("Update");
@@ -73,6 +86,7 @@ public class FlightView {
         stage.setScene(scene);
         stage.setTitle("Airline Reservation System – Flight Management");
         stage.show();
+
 
         // Fill data in the table
         Runnable loadFlights = () -> table.getItems().setAll(flightDAO.getAllFlights());

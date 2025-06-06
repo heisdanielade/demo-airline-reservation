@@ -17,10 +17,15 @@ public class FlightDAOImpl implements FlightDAO{
                        "  f.base_departure_time, \n" +
                        "  f.base_arrival_time, \n" +
                        "  da.name AS departure_airport_name, \n" +
-                       "  aa.name AS arrival_airport_name\n" +
+                       "  aa.name AS arrival_airport_name, \n" +
+                       "  CONCAT(am.name, ' ', at.model) AS aircraft_name \n" +  // ✅ space before FROM
                        "FROM flight f\n" +
                        "JOIN airport da ON f.departure_airport_id = da.airport_id\n" +
-                       "JOIN airport aa ON f.arrival_airport_id = aa.airport_id;\n";
+                       "JOIN airport aa ON f.arrival_airport_id = aa.airport_id\n" +
+                       "JOIN aircraft ac ON f.aircraft_id = ac.aircraft_id\n" +
+                       "JOIN aircraft_type at ON ac.aircraft_type_id = at.aircraft_type_id\n" +
+                       "JOIN aircraft_manufacturer am ON at.aircraft_manufacturer_id = am.aircraft_manufacturer_id;";
+
 
         try(Connection conn = DatabaseManager.getConnection();
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -32,7 +37,8 @@ public class FlightDAOImpl implements FlightDAO{
                         rs.getTimestamp("base_departure_time").toLocalDateTime(),
                         rs.getTimestamp("base_arrival_time").toLocalDateTime(),
                         rs.getString("departure_airport_name"),
-                        rs.getString("arrival_airport_name")
+                        rs.getString("arrival_airport_name"),
+                        rs.getString("aircraft_name")
                 ));
             }
         } catch (SQLException e){
