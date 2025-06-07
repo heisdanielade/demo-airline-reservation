@@ -204,14 +204,14 @@ INSERT INTO crew_role (role_name) VALUES ('Flight Engineer');
 
 
 INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (1, 1, 150);
-INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (2, 1, 200);
+INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (2, 2, 200);
 INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (3, 1, 180);
-INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (4, 1, 180);
+INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (4, 2, 180);
 INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (5, 1, 150);
 INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (6, 1, 180);
-INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (7, 1, 200);
+INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (7, 2, 200);
 INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (8, 1, 180);
-INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (9, 1, 180);
+INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (9, 2, 180);
 INSERT INTO aircraft_cabin_class (aircraft_id, cabin_class_id, seat_capacity) VALUES (10, 1, 200);
 
 
