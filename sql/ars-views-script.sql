@@ -28,6 +28,15 @@ JOIN ticket t ON c.client_id = t.client_id
 GROUP BY c.client_id, c.first_name, c.last_name;
 
 
+-- Flights From Departure Airports
+CREATE OR REPLACE VIEW view_flight_distribution_by_departure AS
+SELECT 
+    a.name AS departure_airport,
+    COUNT(*) AS total_flights
+FROM flight f
+JOIN airport a ON f.departure_airport_id = a.airport_id
+GROUP BY a.name;
+
 -- Employee FLight Assignment
 CREATE OR REPLACE VIEW view_employee_flight_summary AS
 SELECT 
