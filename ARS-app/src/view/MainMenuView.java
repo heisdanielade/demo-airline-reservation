@@ -16,7 +16,7 @@ public class MainMenuView {
         Button crudBtn = new Button("✈️  Manage Flights Operations");
         Button report1Btn = new Button("📋  View Flight Seats");
         Button report2Btn = new Button("🧑‍✈️  View Client Summary");
-        Button report3Btn = new Button("👨‍🔧  View Employee Summary");
+        Button report3Btn = new Button("👨‍🔧  View Departure Airport Flights Stats");
 
         crudBtn.setPrefWidth(250);
         report1Btn.setPrefWidth(250);
@@ -27,7 +27,7 @@ public class MainMenuView {
         crudBtn.setOnAction(e -> new FlightView().start(new Stage()));
         report1Btn.setOnAction(e -> new FlightSeatReportView().start(new Stage()));
         report2Btn.setOnAction(e -> new ClientSummaryView().start(new Stage()));
-        report3Btn.setOnAction(e -> new EmployeeSummaryView().start(new Stage()));
+        report3Btn.setOnAction(e -> new FlightDistributionChartView().start(new Stage()));
 
         Label info = new Label("By Daniel Adediran");
         info.setStyle("-fx-font-size: 15px");

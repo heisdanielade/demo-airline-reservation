@@ -1,5 +1,6 @@
 package dao;
 
+import model.AirportFlightStat;
 import model.ClientBookingSummary;
 import model.EmployeeFlightSummary;
 import model.FlightSeatReport;
@@ -30,7 +31,7 @@ public class ViewDAOImpl implements ViewDAO {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error fetching report: " + e.getMessage());
+            System.err.println("(e) Error fetching report: " + e.getMessage());
         }
 
         return list;
@@ -57,11 +58,34 @@ public class ViewDAOImpl implements ViewDAO {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error loading client summary: " + e.getMessage());
+            System.err.println("(e) Error loading client summary: " + e.getMessage());
         }
 
         return list;
     }
+
+    @Override
+    public List<AirportFlightStat> getDepartureAirportFlightStats() {
+        List<AirportFlightStat> stats = new ArrayList<>();
+        String sql = "SELECT departure_airport, total_flights FROM view_flight_distribution_by_departure";
+
+        try (Connection conn = DatabaseManager.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                stats.add(new AirportFlightStat(
+                        rs.getString("departure_airport"),
+                        rs.getInt("total_flights")
+                ));
+            }
+        } catch (SQLException e) {
+            System.err.println("(e) Error loading departure airport stats: " + e.getMessage());
+        }
+
+        return stats;
+    }
+
 
     @Override
     public List<EmployeeFlightSummary> getEmployeeFlightSummary() {
@@ -83,7 +107,7 @@ public class ViewDAOImpl implements ViewDAO {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error loading employee summary: " + e.getMessage());
+            System.err.println("(e) Error loading employee summary: " + e.getMessage());
         }
 
         return list;
