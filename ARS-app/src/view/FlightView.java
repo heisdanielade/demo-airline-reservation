@@ -153,10 +153,16 @@ public class FlightView {
                 return;
             }
             boolean confirmed = confirm("Are you sure you want to delete flight ID " + selected.getFlightId() + "?");
-            if (confirmed && flightDAO.deleteFlight(selected.getFlightId())) {
-                loadFlights.run();
-                depField.clear();
-                arrField.clear();
+            if (confirmed) {
+                try{
+                    if (flightDAO.deleteFlight(selected.getFlightId())){
+                        loadFlights.run();
+                        depField.clear();
+                        arrField.clear();
+                    }
+                } catch (Exception ex){
+                    showError("(e) Could not delete flight.");
+                }
             }
         });
 
