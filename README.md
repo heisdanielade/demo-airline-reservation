@@ -1,23 +1,39 @@
-# ✈️ Airline Reservation System - Database Project
+# ✈️ Airline Reservation System
 
 ## 📄 Application Description
 
-This project is a **JavaFX-based mini CRUD application** connected to a MariaDB-backed **Airline Reservation System** database. It allows:
+This project is a **JavaFX-based mini-CRUD** application connected to a **MariaDB-backed** Airline Reservation
+System database. Its purpose is to simulate the core operations of an airline, S
 
 - Managing flight data (Create, Read, Update, Delete)
-- Viewing summary reports generated from complex SQL views
-- Abstraction of database interactions using DAO design pattern
+- Viewing operational summary reports generated from complex SQL views
+- Viewing simple flight statistics
 
-The backend is fully abstracted to support changes in the underlying data source (e.g., migrating from DB to CSV). SQL errors are logged to the console, never exposed to the user interface.
+The application demonstrates the use of:
+- **DAO design pattern** for database abstraction
+- JavaFX for GUI
+- SQL views for report generation
+- Can be reconnected to another data source (CSV, another DB) easily
+
+The backend is fully abstracted to support changes in the underlying data source (e.g., migrating from DB to CSV). SQL errors (e.g. invalid FK) are logged to the console, never exposed to the user interface.
+
+## Flight CRUD Operations
+1. The user opens the “Flight Operations Management” window.
+2. A table displays existing flights (fetched from the database).
+3. The user can:
+   - Click **“Add”** to insert a new flight (departure & arrival time, aircraft to be used, departure & arrival airports).
+   - Click **“Update”** to edit selected flight data.
+   - Click **“Delete”** to remove a flight.
+   - Click **“Refresh”** to reload fetched data.
 
 ---
 
-## 🧩 Entity Descriptions
+## Entity Descriptions
 
 The system is structured around core real-world components of airline operations:
 
 - **flight**: A scheduled trip from one airport to another.
-- **aircraft**: Planes used to operate flights, each with a type and registration.
+- **aircraft**: Airlanes used to operate flights, each with a type and registration.
 - **aircraft_type** and **aircraft_manufacturer**: Define plane models and their manufacturers.
 - **airport**, **city**, **country**: Location data for departures and arrivals.
 - **client**: Individuals who book flights.
@@ -26,7 +42,7 @@ The system is structured around core real-world components of airline operations
 - **crew_role**: Defines what function each employee serves on a flight.
 - **flight_crew**: Assignment of employees to flights in specific roles.
 - **seat**, **seat_type**, **cabin_class**: Defines the seating layout inside aircraft.
-- **aircraft_cabin_class**: Mapping of aircraft to their seating classes (e.g., Economy).
+- **aircraft_cabin_class**: Mapping of aircraft to their seating classes (e.g., Economy, Business).
 - **payment**, **payment_method**, **payment_status**, **currency**: Tracks how bookings are paid for.
 - **document_type**: Type of ID used during booking (e.g., Passport).
 - **baggage**, **baggage_type**: Info about checked or carry-on bags.
@@ -36,77 +52,24 @@ The system is structured around core real-world components of airline operations
 
 Each table is interlinked with foreign keys to simulate a real airline data environment.
 
-### `flight`
-| Column | Type | Description |
-|--------|------|-------------|
-| flight_id | INT | Unique flight identifier |
-| base_departure_time | DATETIME | Planned departure time |
-| base_arrival_time | DATETIME | Planned arrival time |
-| departure_airport_id | FK | Links to `airport` |
-| arrival_airport_id | FK | Links to `airport` |
-| aircraft_id | FK | Links to `aircraft` |
+![Entity-Relationship-Diagram](./assets/ERD.png)
 
-### `aircraft`
-| Column | Type | Description |
-|--------|------|-------------|
-| aircraft_id | INT | Unique aircraft ID |
-| registration_number | VARCHAR | Plane identifier |
-| status_id | FK | Status (active, under maintenance, etc.) |
-| aircraft_type_id | FK | Type/model of the aircraft |
-
-### `client`
-| Column | Type | Description |
-|--------|------|-------------|
-| client_id | INT | Unique client ID |
-| first_name | VARCHAR | First name |
-| last_name | VARCHAR | Last name |
-| email_address | VARCHAR | Contact email |
-
-### `employee`
-| Column | Type | Description |
-|--------|------|-------------|
-| employee_id | INT | Unique employee ID |
-| first_name, last_name | VARCHAR | Name details |
-| hire_date | DATE | Start of employment |
-| nationality_id, gender_id | FK | Demographic info |
-
-### `flight_crew`
-| Column | Type | Description |
-|--------|------|-------------|
-| flight_crew_id | INT | PK |
-| employee_id | FK | Who's flying |
-| flight_id | FK | On which flight |
-| role_id | FK | Crew role (Captain, Attendant, etc.) |
-
-### `ticket`
-| Column | Type | Description |
-|--------|------|-------------|
-| ticket_id | VARCHAR | Booking reference |
-| client_id | FK | Client who booked |
-| flight_id | FK | Flight booked |
-| seat_id | FK | Assigned seat |
-| currency_id, document_type_id | FK | Metadata |
-
-### `payment`
-| Column | Type | Description |
-|--------|------|-------------|
-| payment_id | INT | Unique payment ID |
-| ticket_id | FK | Paid-for ticket |
-| amount_paid | DECIMAL | Amount |
-| method_id, status_id | FK | Payment method & status |
-
-### `seat`
-| Column | Type | Description |
-|--------|------|-------------|
-| seat_id | INT | Seat ID |
-| seat_row | INT | Row number |
-| seat_number | VARCHAR | Row + letter |
-| type_id | FK | Seat type (Standard) |
-| aircraft_cabin_id | FK | Aircraft cabin location |
+## Database Assumptions
+- Primary keys are **integer-based** and **auto-incremented** unless stated otherwise (e.g., **_ticket_id_** is a VARCHAR).
+- Each **_flight_** is operated by one **_aircraft_** and can have many crew members and tickets.
+- **_client_** and **_employee_** emails are assumed to be unique, but not strictly enforced in the DB.
+- Each **_ticket_** is for one flight and one seat only.
+- **Currency** is simplified to a single default **(EUR)** for all test data.
+- Each **_employee_** is only assigned to one **_crew_role_** per flight in test data, but the schema allows for more.
+- **_Payment_** is recorded in full, partial payments are not supported in this simplified model.
+- No historical logging or soft deletes are implemented; deletions are hard deletes.
+- Only Economy class is used in seating test data, but the schema supports multiple cabin classes.
 
 ---
 
-## 📊 View Descriptions
+## Report View Descriptions 
+
+Displayed in JavaFX application
 
 ### `view_flight_seat_availability`
 Shows number of available seats on each flight by subtracting booked seats from aircraft capacity.
@@ -120,29 +83,36 @@ Summarizes each client’s ticket bookings and payment totals.
 **Joins:** `client`, `ticket`, `payment`  
 **Used in:** Report screen “Client Frequent Flyer Summary”
 
-### `view_employee_flight_summary`
-Lists employees assigned to flights and how many they’ve worked, grouped by role.
+### `view_flight_distribution_by_departure`
+Shows distributions of flights from all departure aiports.
 
-**Joins:** `employee`, `flight_crew`, `crew_role`  
-**Used in:** Report screen “Employee Flight Assignments”
+**Joins:** `flight`, `airport`  
+**Used in:** Report screen “Departure Airport Flight Stats”
 
 ---
 
-## 🖥️ Java Application Architecture
+## Java Application Architecture
 
 ### Layers:
-- **Model**: POJOs for `Flight`, `Client`, `EmployeeFlightSummary`, etc.
+- **Model**: Plain Java Objects for `FlightSeatReport`, `ClientBookingSummary` & `AirportFlightStat`
 - **DAO**: Clean separation of database logic with JDBC
-- **View**: Pure JavaFX screens (no FXML), one per report + CRUD
+- **View**: JavaFX screens, one per report + Flight CRUD
 
-### Features:
-- SQL exceptions are caught and **printed to the console**, not UI
-- Can be reconnected to another data source (CSV, another DB) easily
-- Code designed for readability and maintainability
+### GUI Screens:
+
+| Screen | Preview |
+|--------|---------|
+| **Main Menu** | ![Main Menu](./assets/main-menu.png) |
+| **Flight Management** | ![Flight Management](./assets/flight-crud.png) |
+| **Available Flight Seats Report** | ![Available Seats](./assets/available-seats.png) |
+| **Departure Airport Flight Stat** | ![Departure Stats](./assets/departure-flight-stats.png) |
+| **Client Booking Report** | ![Client Report](./assets/client-summary.png) |
+| **Error Modal** | ![Error Modal](./assets/error-modal.png) |
+
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 src/
@@ -150,9 +120,14 @@ src/
  │    ├── FlightDAO.java
  │    ├── ViewDAO.java
  │    └── impl/ (implementations)
+ ├── dep/
+ │    ├── mariadb-java-client.jar
  ├── model/
  │    ├── Flight.java
- │    └── EmployeeFlightSummary.java
+ │    └── FlightSeatReport.java
+ │    └── etc.
+ ├── util/
+ │    ├── DatabaseManager.java
  ├── view/
  │    ├── FlightCRUDView.java
  │    ├── EmployeeSummaryView.java
@@ -162,16 +137,26 @@ src/
 
 ---
 
-## ✅ Test Data Summary
+## Requirements
+1. XAMPP Control Panel
+2. HeidiSQL
+3. MariaDB Java Client
+4. JavaFX SDK
+5. Code Editing Environment (e.g Intellij IDEA, VSCode)
 
-- 10 clients, 10 employees
-- 10 aircraft linked to 10 real airports
-- 10 flights with assigned crew and booked tickets
-- All key foreign keys satisfied (`currency`, `payment_status`, etc.)
+## Application Setup
 
----
+1. Explore the **_Entity Relationship Diagram_**, **_Entity Descriptions_** and **_Database Assumptions_** to fully understand Database schema & logic.
+2. Clone this repository.
+3. Ensure **_xampp-control_** & **_heidisql_** are installed and setup properly.
+4. Run the scripts in the sql folder in the following order:
+   - **_DB-ddl.sql_**
+   - **_report-views.sql_**
+   - **_sample-data.sql_**
+5. Run **_Main.java_** file in the **_/ARS-app/src_** folder to start application...
 
-## 🔚 Notes
+
+## Important Notes
 
 - JavaFX must be properly linked using:
   ```
@@ -187,7 +172,6 @@ src/
 
 ---
 
-## 📌 Author
-**[Daniel Adediran](https://www.heisdanielade.xyz/)**
+Developed by **[heisdanielade](https://www.heisdanielade.xyz/)**
 
 ---
