@@ -29,11 +29,8 @@ public class MainMenuView {
         report2Btn.setOnAction(e -> new ClientSummaryView().start(new Stage()));
         report3Btn.setOnAction(e -> new FlightDistributionChartView().start(new Stage()));
 
-        Label info = new Label("By Daniel Adediran");
-        info.setStyle("-fx-font-size: 15px");
 
-
-        VBox layout = new VBox(15, title, crudBtn, report1Btn, report2Btn, report3Btn, info);
+        VBox layout = new VBox(15, title, crudBtn, report1Btn, report2Btn, report3Btn);
         layout.setPadding(new Insets(30));
         layout.setStyle("-fx-alignment: center;");
         Scene scene = new Scene(layout, 400, 300);
