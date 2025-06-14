@@ -102,7 +102,7 @@ Shows distributions of flights from all departure aiports.
 
 | Screen | Preview |
 |--------|---------|
-| **Main Menu** | ![Main Menu](./assets/main-menu.png) |
+| **Main Menu** | ![Main Menu](./assets/menu.png) |
 | **Flight Management** | ![Flight Management](./assets/flight-crud.png) |
 | **Available Flight Seats Report** | ![Available Seats](./assets/available-seats.png) |
 | **Departure Airport Flight Stat** | ![Departure Stats](./assets/departure-flight-stats.png) |
