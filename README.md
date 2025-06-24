@@ -3,7 +3,7 @@
 ## 📄 Application Description
 
 This project is a **JavaFX-based mini-CRUD** application connected to a **MariaDB-backed** Airline Reservation
-System database. Its purpose is to simulate the core operations of an airline, S
+System database. Its purpose is to simulate the core operations of an airline, such as:
 
 - Managing flight data (Create, Read, Update, Delete)
 - Viewing operational summary reports generated from complex SQL views
