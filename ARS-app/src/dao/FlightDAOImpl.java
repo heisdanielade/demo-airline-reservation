@@ -18,7 +18,7 @@ public class FlightDAOImpl implements FlightDAO{
                        "  f.base_arrival_time, \n" +
                        "  da.name AS departure_airport_name, \n" +
                        "  aa.name AS arrival_airport_name, \n" +
-                       "  CONCAT(am.name, ' ', at.model) AS aircraft_name \n" +  // ✅ space before FROM
+                       "  CONCAT(am.name, ' ', at.model) AS aircraft_name \n" +
                        "FROM flight f\n" +
                        "JOIN airport da ON f.departure_airport_id = da.airport_id\n" +
                        "JOIN airport aa ON f.arrival_airport_id = aa.airport_id\n" +
